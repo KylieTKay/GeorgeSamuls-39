@@ -1,4 +1,3 @@
-/*these all apply to body image*/
 * {
     border: none;
     padding: 0;
@@ -8,45 +7,76 @@
 
 .hidden { display: none; }
 
+.grid {
+    display: grid;
+
+    padding-left: 41px;
+    padding-right: 41px;
+
+    grid-template-columns: repeat(12, 116px);
+
+    grid-column-gap: 50px;
+}
+
 html, body { height: 100% }
 
 body { 
   font-family: sans-serif;
-  background-color: black;
+  background-color: #ffffff;
   color: white;
   background-image: url('../img/images/denim.png');
 }
 
+h1 {
+    font-size: 70px;
+} 
+h2 { font-size: 50px;}
+h3 { font-size: 30px;}
+p { font-size: 20px;}
 /* main header rules */
 
 header {
-    background-color: #ed1b24;
+    background-color: #000000;
+    width: 1200px;
+    height: 110px;
     position: sticky;
     top: 0;
     text-align: center;
 }
 
-#main-logo { width: 300px; padding: 10px 0; }
+#main-logo {
+    width: 780px;
+    object-fit: contain; padding: 20; scroll-behavior: smooth;
+    grid-column: 3/8;
+}
 
-/* main rules here */
+#hero-banner {
+    grid-column: 3/8;
+}
+
+/* main rules here */    
+
+
 #character_nav {
     text-align: center;
-    background-color: #710000;
+    background-color: #2f0e1b;
 
-    background-image: url('../img/images/characters_art_mas_mob_01.jpeg');
-    
+    background-image: url('../img/banners/bg_banner.jpg');
+
     background-repeat: no-repeat;
     background-size: cover;
 
     background-blend-mode: multiply;
 }
 
-.characters { list-style-type: multiply; }
+.characters {
+     list-style-type: multiply; 
+}
 
 .characters li { 
     display: inline-block; 
-    height: 220px;
-    margin: 10px 8px;
+    height: 350px;
+    margin: 30px 15px;
 
     background-color: black;
 
@@ -55,38 +85,108 @@ header {
     cursor: pointer;
 }
 
-.characters li h5 { 
+.characters li h4 { 
+    position: relative;
     color: white;
     padding: 12px 8px;
+    font-style: italic;
+    font-size: 18px;
+    z-index: 500;
 }
 
-.characters li a { text-decoration: none;}
+.characters li a {
+     text-decoration: none;
+}
 
 /* sprite */
-.red_bumper{
-    width: 100%;
+.bumper{
+    width: 260px;
     height: 6px;
-    background-color: #ed1b24;
+    background-color: #841641;
+    
+    transition: height 0.5s ease;
+
+    position: absolute;
+}
+.characters li:hover .bumper { 
+    height: 50px; width: 260px; 
 }
 
-.sprite {
-    width: 150px;
-    height: 150px;
+.sprite1 {
+    width: 260px;
+    height: 300px;
 
-    background-image: url('../img/images/marvelSprites.jpg');
+    background-image: url('../img/sprites/ladybug02.jpg');
+}
+.sprite2 {
+    width: 260px;
+    height: 300px;
+
+    background-image: url('../img/sprites/prince02.jpg');
+}
+.sprite3 {
+    width: 260px;
+    height: 300px;
+
+    background-image: url('../img/sprites/tangerine02.jpg');
+}
+.sprite3 {
+    width: 260px;
+    height: 300px;
+
+    background-image: url('../img/sprites/tangerine02.jpg');
+}
+.sprite4 {
+    width: 260px;
+    height: 300px;
+
+    background-image: url('../img/sprites/lemon02.jpg');
+}
+.sprite5 {
+    width: 260px;
+    height: 300px;
+
+    background-image: url('../img/sprites/kimura02.jpg');
+}
+.sprite6 {
+    width: 260px;
+    height: 300px;
+
+    background-image: url('../img/sprites/the_elder02.jpg');
+}
+.sprite7 {
+    width: 260px;
+    height: 300px;
+
+    background-image: url('../img/sprites/the_son02.jpg');
+}
+.sprite8 {
+    width: 260px;
+    height: 300px;
+
+    background-image: url('../img/sprites/white_death02.jpg');
 }
 
-#carol{background-position: -150px 0;}
-#clint{background-position: -300px 0;}
-#hulk{background-position: -450px 0;}
-#thor{background-position: -600px 0;}
-#widow{background-position: -750px 0;}
 
-.sprite:hover { background-position-y: -150px !important;}
+#ladybug{ background-position: -260px 0;}
+#prince{ background-position: -260px 0;}
+#tangerine{ background-position: -260px 0;}
+#lemon{ background-position: -260px 0;}
+#kimaru{ background-position: -260px 0;}
+#the-elder{ background-position: -260px 0;}
+#the-son{ background-position: -260px 0;}
+#white-death{ background-position: -260px 0;}
+
+
+
+.sprite:hover {
+     background-position-y: -260px !important;
+    }
 
 article {padding: 20px;}
 
 article h3 {
+    font-display: url('../css/night_train_382.ttf');
     font-size: 2em;
     text-align: center;
     margin-bottom: 14px;
@@ -102,77 +202,111 @@ article p {
     margin: 0 auto;
 }
 
+#container {
+    background: #2f0e1b 1900px 110px;
+    
+    }
+
 /* footer rules here */
 footer {
     color: white;
     padding: 20px 0;
     text-align: center;
 }
+
+footer p { font-size: 12px;}
     
 .sticky_footer {
-    position: sticky;
     top: 100%;
-    
     height: 80px;
-    background-color: rgb(40, 37, 37);
+    position: static;
 }
 
-/* lightbox rule here */
-.lightbox {
-    width: 100vw;
-    height: 100vh;
+.lightbox { 
+    width: 100vw; /* vw = viewport width => screen width */
+    height: 100vh; /* vh = viewport height => screen height */
 
     position: absolute;
     top: 0;
+    left: 0;
     bottom: 0;
 
     background-color: rgba(0, 0, 0, 0.85);
-    background-image: url("../img/images/Cap_LB_Bg.png");
-    background-repeat: no-repeat;
 
-    background-size: 55vh;
-    background-position: 40px bottom;
+    background-size: 100%; /* 55% of the viewport height */
+    background-position: fill;
+
+    z-index: 5000;
 
     display: none;
-}
 
-/*#lightbox {
-    background-image: url("../img/images/Cap_LB_Bg.png");
 }
-repeat 2-4,6*/
-#lightbox5 {
-    background-image: url("../img/images/Thor_LB_Bg.png");
-}
-
 .lightbox_close {
     position: relative;
     top: 20px;
     left: 95%;
-    
+
     color: white;
     font-size: 3em;
 
     text-decoration: none;
+
     font-weight: bolder;
 }
+.lightbox_close:hover { opacity: 0.5; color: #841641;}
 
-.lightbox_close:hover{ 
-    opacity: 0.5;
-    color: brown;
-}
 
+.lightbox:target {user-select: auto;}
 .lightbox article {
     width: 55%;
     margin-left: 40%;
     padding-top: 50px;
 }
 
-.lb_text, .lb_heading { text-align: left;}
+.lb_text, .lb_heading { text-align: right;}
 
 .lb_text {
     line-height: 1.6 !important;
-    margin-left: 0;
+    margin-right: 0;
     padding-top: 2em;
 }
-
+/* turn the lightbox on using the :target pseudo selector */
 .lightbox:target { display: block;}
+
+#lb-George {
+    background-image: url('../img/lightbox/lb_george.png');
+    background-repeat: no-repeat;
+}
+#lb-Nicole {
+    background-image: url('../img/lightbox/lb_nicole.png');
+    background-repeat: no-repeat;
+}
+#lb-Taylor {
+    background-image: url('../img/lightbox/lb_taylor.png');
+    background-repeat: no-repeat;
+}
+#lb-Jada {
+    background-image: url('../img/lightbox/lb_jada.png');
+    background-repeat: no-repeat;
+}
+#lb-Alex {
+    background-image: url('../img/lightbox/lb_alex.png');
+    background-repeat: no-repeat;
+}
+#lb-Leylah {
+    background-image: url('../img/lightbox/lb_leylah.png');
+    background-repeat: no-repeat;
+}
+#lb-Millie {
+    background-image: url('../img/lightbox/lb_millie.png');
+    background-repeat: no-repeat;
+}
+#lb-Chonco {
+    background-image: url('../img/lightbox/lb_choncho.png');
+    background-repeat: no-repeat;
+}
+
+
+.lightbox article h3 {
+    font-style: italic;
+}
