@@ -75,7 +75,7 @@ header {
 
 .characters li { 
     display: inline-block; 
-    height: 350px;
+    height: 450px;
     margin: 30px 15px;
 
     background-color: black;
@@ -100,7 +100,7 @@ header {
 
 /* sprite */
 .bumper{
-    width: 260px;
+    width: 400px;
     height: 6px;
     background-color: #841641;
     
@@ -109,78 +109,72 @@ header {
     position: absolute;
 }
 .characters li:hover .bumper { 
-    height: 50px; width: 260px; 
+    height: 50px; width: 400px; 
 }
 
 .sprite1 {
-    width: 260px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
 
     background-image: url('../img/sprites/ladybug02.jpg');
 }
 .sprite2 {
-    width: 260px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
 
-    background-image: url('../img/sprites/prince02.jpg');
+    background-image: url('../img/sprites/nicole_sm.jpg');
 }
 .sprite3 {
-    width: 260px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
 
-    background-image: url('../img/sprites/tangerine02.jpg');
-}
-.sprite3 {
-    width: 260px;
-    height: 300px;
-
-    background-image: url('../img/sprites/tangerine02.jpg');
+    background-image: url('../img/sprites/taylor.jpg');
 }
 .sprite4 {
-    width: 260px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
 
-    background-image: url('../img/sprites/lemon02.jpg');
+    background-image: url('../img/sprites/jada_sm.jpg');
 }
 .sprite5 {
-    width: 260px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
 
-    background-image: url('../img/sprites/kimura02.jpg');
+    background-image: url('../img/sprites/alex_sm.jpg');
 }
 .sprite6 {
-    width: 260px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
 
-    background-image: url('../img/sprites/the_elder02.jpg');
+    background-image: url('../img/sprites/leylah_sm.jpg');
 }
 .sprite7 {
-    width: 260px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
 
-    background-image: url('../img/sprites/the_son02.jpg');
+    background-image: url('../img/sprites/millie_sm.jpg');
 }
 .sprite8 {
-    width: 260px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
 
-    background-image: url('../img/sprites/white_death02.jpg');
+    background-image: url('../img/sprites/choncho_sm.jpg');
 }
 
 
-#ladybug{ background-position: -260px 0;}
-#prince{ background-position: -260px 0;}
-#tangerine{ background-position: -260px 0;}
-#lemon{ background-position: -260px 0;}
-#kimaru{ background-position: -260px 0;}
-#the-elder{ background-position: -260px 0;}
-#the-son{ background-position: -260px 0;}
-#white-death{ background-position: -260px 0;}
+#George { background-position: -400px 0;}
+#Nicole { background-position: -400px 0;}
+#Taylor { background-position: -400px 575px;}
+#Jada { background-position: -400px 0;}
+#Alex { background-position: -400px 0;}
+#Leylah { background-position: -400px 0;}
+#Millie { background-position: -400px 0;}
+#Choncho { background-position: -400px ;}
 
 
 
 .sprite:hover {
-     background-position-y: -260px !important;
+     background-position-y: -400px !important;
     }
 
 article {padding: 20px;}
@@ -203,9 +197,29 @@ article p {
 }
 
 #container {
-    background: #2f0e1b 1900px 110px;
-    
+    background: #2f0e1b 1900px 110px; 
     }
+
+.row {
+    display: inline-block;
+    grid-column: span 10;
+}
+
+.album_images {
+    padding: 150px;
+    width: 100vw;
+    align-items: center;
+}
+.album_images ul li {
+    display: inline-block;
+    height: 170px;
+}
+
+.album-img { 
+    width: 20vw;
+    padding-top: 10px;
+    padding-left: 30;
+}
 
 /* footer rules here */
 footer {
@@ -239,7 +253,6 @@ footer p { font-size: 12px;}
     z-index: 5000;
 
     display: none;
-
 }
 .lightbox_close {
     position: relative;
