@@ -7,24 +7,16 @@
 
 .hidden { display: none; }
 
-.grid {
-    display: grid;
-
-    padding-left: 41px;
-    padding-right: 41px;
-
-    grid-template-columns: repeat(12, 116px);
-
-    grid-column-gap: 50px;
-}
 
 html, body { height: 100% }
 
 body { 
-  font-family: sans-serif;
-  background-color: #ffffff;
-  color: white;
-  background-image: url('../img/images/denim.png');
+    font-family: 'Yeseva One', cursive;
+    background-color: #ffffff;
+    color: white;
+    position: sticky;
+    background-image: url('../img/images/denim.png');
+    width: 100vw;
 }
 
 h1 {
@@ -35,24 +27,16 @@ h3 { font-size: 30px;}
 p { font-size: 20px;}
 /* main header rules */
 
-header {
-    background-color: #000000;
-    width: 1200px;
-    height: 110px;
-    position: sticky;
+.header {
+    background: #000000;
     top: 0;
-    text-align: center;
+    z-index: 100px;
+    position: sticky;
+    padding-left: 17vw;
+    padding-bottom: 0px;
 }
 
-#main-logo {
-    width: 780px;
-    object-fit: contain; padding: 20; scroll-behavior: smooth;
-    grid-column: 3/8;
-}
 
-#hero-banner {
-    grid-column: 3/8;
-}
 
 /* main rules here */    
 
@@ -76,9 +60,9 @@ header {
 .characters li { 
     display: inline-block; 
     height: 450px;
-    margin: 30px 15px;
+    margin: 15px 15px;
 
-    background-color: black;
+    background-color: black ;
 
     text-align: left;
 
@@ -91,7 +75,6 @@ header {
     padding: 12px 8px;
     font-style: italic;
     font-size: 18px;
-    z-index: 500;
 }
 
 .characters li a {
@@ -107,6 +90,7 @@ header {
     transition: height 0.5s ease;
 
     position: absolute;
+    z-index: 50px;
 }
 .characters li:hover .bumper { 
     height: 50px; width: 400px; 
@@ -116,7 +100,7 @@ header {
     width: 400px;
     height: 400px;
 
-    background-image: url('../img/sprites/ladybug02.jpg');
+    background-image: url('../img/sprites/george_sm.jpg');
 }
 .sprite2 {
     width: 400px;
@@ -221,6 +205,12 @@ article p {
     padding-left: 30;
 }
 
+#video {
+    background-color: #2f0e1b;
+    width: 100vw;
+    height: 700px;
+}
+
 /* footer rules here */
 footer {
     color: white;
@@ -282,6 +272,13 @@ footer p { font-size: 12px;}
     line-height: 1.6 !important;
     margin-right: 0;
     padding-top: 2em;
+    width: 35vw;
+    font-size: 25pt;
+}
+
+#lb-txt-jada {
+    padding-top: 15px;
+    width: 25vw;
 }
 /* turn the lightbox on using the :target pseudo selector */
 .lightbox:target { display: block;}
@@ -314,8 +311,8 @@ footer p { font-size: 12px;}
     background-image: url('../img/lightbox/lb_millie.png');
     background-repeat: no-repeat;
 }
-#lb-Chonco {
-    background-image: url('../img/lightbox/lb_choncho.png');
+#lb-Choncho {
+    background-image: url(../img/lightbox/lb_choncho.png);
     background-repeat: no-repeat;
 }
 
